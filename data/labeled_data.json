@@ -1,0 +1,377 @@
+[
+  {
+    "text": "IN CONSIDERATION OF the Insured named in the Schedule hereto having paid to the Shriram General Insurance Company Limited the full premium mentioned in the said schedule",
+    "entities": [
+      {"start": 71, "end": 109, "label": "INSURED"},
+      {"start": 124, "end": 131, "label": "PREMIUM"}
+    ]
+  },
+  {
+    "text": "the Company shall pay to the Insured the value of the Property at the time of the happening of its destruction or the amount of such damage",
+    "entities": []
+  },
+  {
+    "text": "Fire Excluding destruction or damage caused to the property insured by its own fermentation, natural heating or spontaneous combustion.",
+    "entities": [
+      {"start": 0, "end": 4, "label": "COVERAGE"},
+      {"start": 95, "end": 133, "label": "EXCLUSION"}
+    ]
+  },
+  {
+    "text": "Explosion/Implosion Excluding loss, destruction of or damage to boilers other than domestic boilers, economizers or other vessels, machinery or apparatus in which steam is generated",
+    "entities": [
+      {"start": 0, "end": 19, "label": "COVERAGE"},
+      {"start": 56, "end": 180, "label": "EXCLUSION"}
+    ]
+  },
+  {
+    "text": "Aircraft Damage Loss, Destruction or damage caused by Aircraft, other aerial or space devices and articles dropped therefrom excluding those caused by pressure waves.",
+    "entities": [
+      {"start": 0, "end": 14, "label": "COVERAGE"},
+      {"start": 140, "end": 164, "label": "EXCLUSION"}
+    ]
+  },
+  {
+    "text": "Riot, Strike and Malicious Damage Loss of or visible physical damage or destruction by external violent means directly caused to the property insured",
+    "entities": [
+      {"start": 0, "end": 33, "label": "COVERAGE"}
+    ]
+  },
+  {
+    "text": "this insurance excludes loss, damage cost or expense of whatsoever nature directly or indirectly caused by, resulting from or in connection with any act of terrorism",
+    "entities": [
+      {"start": 141, "end": 164, "label": "EXCLUSION"}
+    ]
+  },
+  {
+    "text": "Terrorism Damage Exclusion Warranty: Notwithstanding any provision to the contrary within this insurance it is agreed that this insurance excludes loss, damage cost or expense",
+    "entities": [
+      {"start": 0, "end": 35, "label": "EXCLUSION"}
+    ]
+  },
+  {
+    "text": "The sum insured shall be Rs. 50,00,000 for the policy period commencing 01/04/2024 to 31/03/2025.",
+    "entities": [
+      {"start": 25, "end": 37, "label": "POLICY_LIMIT"},
+      {"start": 71, "end": 81, "label": "POLICY_DATE"},
+      {"start": 85, "end": 95, "label": "POLICY_DATE"}
+    ]
+  },
+  {
+    "text": "Premium payable: INR 12,500 per annum inclusive of all taxes and levies.",
+    "entities": [
+      {"start": 17, "end": 26, "label": "PREMIUM"}
+    ]
+  },
+  {
+    "text": "Flood and Inundation including flooding from the sea",
+    "entities": [
+      {"start": 0, "end": 20, "label": "COVERAGE"}
+    ]
+  },
+  {
+    "text": "Earthquake (Fire and Shock) damage to the property insured",
+    "entities": [
+      {"start": 0, "end": 26, "label": "COVERAGE"}
+    ]
+  },
+  {
+    "text": "Subsidence and Landslide including Rock Slide",
+    "entities": [
+      {"start": 0, "end": 45, "label": "COVERAGE"}
+    ]
+  },
+  {
+    "text": "Bursting and/or overflowing of Water Tanks, Apparatus and Pipes",
+    "entities": [
+      {"start": 0, "end": 63, "label": "COVERAGE"}
+    ]
+  },
+  {
+    "text": "Missile Testing operations causing loss or damage to property",
+    "entities": [
+      {"start": 0, "end": 26, "label": "COVERAGE"}
+    ]
+  },
+  {
+    "text": "Leakage and contamination cover for property insured against accidental discharge of liquids",
+    "entities": [
+      {"start": 0, "end": 27, "label": "COVERAGE"}
+    ]
+  },
+  {
+    "text": "The policy does not cover loss or damage due to wear and tear, gradual deterioration, rust or oxidation.",
+    "entities": [
+      {"start": 50, "end": 103, "label": "EXCLUSION"}
+    ]
+  },
+  {
+    "text": "Loss or damage due to nuclear perils, radioactive contamination is strictly excluded from this policy.",
+    "entities": [
+      {"start": 25, "end": 67, "label": "EXCLUSION"}
+    ]
+  },
+  {
+    "text": "Consequential loss of any kind or description is excluded from coverage under this policy.",
+    "entities": [
+      {"start": 0, "end": 24, "label": "EXCLUSION"}
+    ]
+  },
+  {
+    "text": "Loss, destruction or damage to bullion or unset precious stones is not covered.",
+    "entities": [
+      {"start": 40, "end": 62, "label": "EXCLUSION"}
+    ]
+  },
+  {
+    "text": "The insured shall give immediate notice to the Company in case of any loss or damage.",
+    "entities": []
+  },
+  {
+    "text": "All disputes arising out of this policy shall be referred to arbitration under the Arbitration and Conciliation Act, 1996.",
+    "entities": []
+  },
+  {
+    "text": "This policy is issued to Tata Motors Limited, Mumbai for the period 01/01/2024 to 31/12/2024.",
+    "entities": [
+      {"start": 25, "end": 44, "label": "INSURED"},
+      {"start": 68, "end": 78, "label": "POLICY_DATE"},
+      {"start": 82, "end": 92, "label": "POLICY_DATE"}
+    ]
+  },
+  {
+    "text": "Total sum insured under this policy is Rs. 2,50,00,000 (Two Crore Fifty Lakh Rupees only).",
+    "entities": [
+      {"start": 39, "end": 54, "label": "POLICY_LIMIT"}
+    ]
+  },
+  {
+    "text": "Annual premium for this policy is Rs. 18,750 plus applicable GST.",
+    "entities": [
+      {"start": 35, "end": 44, "label": "PREMIUM"}
+    ]
+  },
+  {
+    "text": "The insured Reliance Industries Limited shall maintain adequate fire safety measures on the insured premises.",
+    "entities": [
+      {"start": 12, "end": 38, "label": "INSURED"}
+    ]
+  },
+  {
+    "text": "Policy number GEN312 is valid from 15/06/2023 to 14/06/2024 and covers Standard Fire and Special Perils.",
+    "entities": [
+      {"start": 35, "end": 45, "label": "POLICY_DATE"},
+      {"start": 49, "end": 59, "label": "POLICY_DATE"},
+      {"start": 72, "end": 103, "label": "COVERAGE"}
+    ]
+  },
+  {
+    "text": "Coverage under this policy includes damage caused by storm, cyclone, typhoon, tempest, hurricane, tornado, flood or inundation.",
+    "entities": [
+      {"start": 56, "end": 126, "label": "COVERAGE"}
+    ]
+  },
+  {
+    "text": "The maximum liability of the insurer under this policy shall not exceed Rs. 75,00,000.",
+    "entities": [
+      {"start": 72, "end": 84, "label": "POLICY_LIMIT"}
+    ]
+  },
+  {
+    "text": "This certificate is issued to HDFC Bank Limited as certificate holder as of 01/03/2024.",
+    "entities": [
+      {"start": 30, "end": 47, "label": "INSURED"},
+      {"start": 76, "end": 86, "label": "POLICY_DATE"}
+    ]
+  },
+  {
+    "text": "General liability coverage limit is USD 1,000,000 per occurrence and USD 2,000,000 aggregate.",
+    "entities": [
+      {"start": 0, "end": 26, "label": "COVERAGE"},
+      {"start": 36, "end": 49, "label": "POLICY_LIMIT"},
+      {"start": 69, "end": 82, "label": "POLICY_LIMIT"}
+    ]
+  },
+  {
+    "text": "Products and completed operations coverage of USD 500,000 applies to this policy.",
+    "entities": [
+      {"start": 0, "end": 39, "label": "COVERAGE"},
+      {"start": 47, "end": 57, "label": "POLICY_LIMIT"}
+    ]
+  },
+  {
+    "text": "The policy excludes damage caused by intentional acts, fraud, or misrepresentation by the insured.",
+    "entities": [
+      {"start": 22, "end": 97, "label": "EXCLUSION"}
+    ]
+  },
+  {
+    "text": "Workers compensation and employers liability coverage is provided under this certificate.",
+    "entities": [
+      {"start": 0, "end": 53, "label": "COVERAGE"}
+    ]
+  },
+  {
+    "text": "Automobile liability coverage limit: USD 500,000 combined single limit per accident.",
+    "entities": [
+      {"start": 0, "end": 28, "label": "COVERAGE"},
+      {"start": 37, "end": 48, "label": "POLICY_LIMIT"}
+    ]
+  },
+  {
+    "text": "The insured Mahindra and Mahindra Ltd has paid a premium of Rs. 45,000 for comprehensive coverage.",
+    "entities": [
+      {"start": 12, "end": 34, "label": "INSURED"},
+      {"start": 56, "end": 65, "label": "PREMIUM"}
+    ]
+  },
+  {
+    "text": "Coverage commences on 01/07/2023 and expires on 30/06/2024 unless renewed prior to expiry.",
+    "entities": [
+      {"start": 22, "end": 32, "label": "POLICY_DATE"},
+      {"start": 48, "end": 58, "label": "POLICY_DATE"}
+    ]
+  },
+  {
+    "text": "Infosys BPO Limited is the named insured under policy number IRDA2024/GEN/001.",
+    "entities": [
+      {"start": 0, "end": 18, "label": "INSURED"}
+    ]
+  },
+  {
+    "text": "The deductible applicable to each and every loss is Rs. 5,000.",
+    "entities": [
+      {"start": 52, "end": 61, "label": "POLICY_LIMIT"}
+    ]
+  },
+  {
+    "text": "Loss or damage caused by war, invasion, act of foreign enemy, hostilities, civil war, rebellion is excluded.",
+    "entities": [
+      {"start": 25, "end": 106, "label": "EXCLUSION"}
+    ]
+  },
+  {
+    "text": "The insured Wipro Technologies shall be indemnified for losses not exceeding Rs. 1,00,00,000.",
+    "entities": [
+      {"start": 12, "end": 28, "label": "INSURED"},
+      {"start": 77, "end": 91, "label": "POLICY_LIMIT"}
+    ]
+  },
+  {
+    "text": "Storm and Tempest damage is covered under this policy subject to the terms and conditions herein.",
+    "entities": [
+      {"start": 0, "end": 21, "label": "COVERAGE"}
+    ]
+  },
+  {
+    "text": "Lightning damage is covered under Section I of this Standard Fire and Special Perils Policy.",
+    "entities": [
+      {"start": 0, "end": 16, "label": "COVERAGE"}
+    ]
+  },
+  {
+    "text": "Impact damage caused by any rail, road vehicle or animal is covered.",
+    "entities": [
+      {"start": 0, "end": 38, "label": "COVERAGE"}
+    ]
+  },
+  {
+    "text": "The reinstatement value policy covers the cost of rebuilding or replacing property to its original condition.",
+    "entities": [
+      {"start": 4, "end": 26, "label": "COVERAGE"}
+    ]
+  },
+  {
+    "text": "Loss or damage to property caused by its own mechanical or electrical breakdown is excluded.",
+    "entities": [
+      {"start": 41, "end": 91, "label": "EXCLUSION"}
+    ]
+  },
+  {
+    "text": "Damage caused by pollution or contamination unless caused by an insured peril is excluded from this policy.",
+    "entities": [
+      {"start": 16, "end": 46, "label": "EXCLUSION"}
+    ]
+  },
+  {
+    "text": "The insured shall on the happening of any loss give notice thereof to the Company within 24 hours.",
+    "entities": []
+  },
+  {
+    "text": "Policy inception date is 01/04/2023 and the policy expires on 31/03/2024.",
+    "entities": [
+      {"start": 25, "end": 35, "label": "POLICY_DATE"},
+      {"start": 62, "end": 72, "label": "POLICY_DATE"}
+    ]
+  },
+  {
+    "text": "The insured ICICI Lombard General Insurance Co. Ltd. has a sum insured of Rs. 5,00,00,000.",
+    "entities": [
+      {"start": 12, "end": 51, "label": "INSURED"},
+      {"start": 75, "end": 89, "label": "POLICY_LIMIT"}
+    ]
+  },
+  {
+    "text": "Quarterly premium installment of Rs. 3,250 is due on the first day of each quarter.",
+    "entities": [
+      {"start": 32, "end": 41, "label": "PREMIUM"}
+    ]
+  },
+  {
+    "text": "Theft, burglary, housebreaking or any attempt thereat is excluded from this Standard Fire Policy.",
+    "entities": [
+      {"start": 0, "end": 52, "label": "EXCLUSION"}
+    ]
+  },
+  {
+    "text": "Spontaneous fermentation or heating of goods is not covered under this policy.",
+    "entities": [
+      {"start": 0, "end": 45, "label": "EXCLUSION"}
+    ]
+  },
+  {
+    "text": "The named insured Bajaj Auto Limited holds a commercial general liability policy effective 01/06/2024.",
+    "entities": [
+      {"start": 18, "end": 35, "label": "INSURED"},
+      {"start": 90, "end": 100, "label": "POLICY_DATE"}
+    ]
+  },
+  {
+    "text": "Business interruption coverage applies for a maximum indemnity period of 12 months.",
+    "entities": [
+      {"start": 0, "end": 32, "label": "COVERAGE"}
+    ]
+  },
+  {
+    "text": "The policy covers loss of profits resulting from interruption of business caused by an insured peril.",
+    "entities": [
+      {"start": 16, "end": 31, "label": "COVERAGE"}
+    ]
+  },
+  {
+    "text": "Additional premium of Rs. 2,100 shall be charged for inclusion of earthquake cover.",
+    "entities": [
+      {"start": 22, "end": 30, "label": "PREMIUM"},
+      {"start": 67, "end": 82, "label": "COVERAGE"}
+    ]
+  },
+  {
+    "text": "The certificate holder is Citibank N.A. Mumbai Branch and coverage is effective from 15/08/2023.",
+    "entities": [
+      {"start": 26, "end": 50, "label": "INSURED"},
+      {"start": 85, "end": 95, "label": "POLICY_DATE"}
+    ]
+  },
+  {
+    "text": "Total premium collected for this policy year amounts to Rs. 67,500 including terrorism cover.",
+    "entities": [
+      {"start": 55, "end": 65, "label": "PREMIUM"}
+    ]
+  },
+  {
+    "text": "The maximum amount payable under the consequential loss section is Rs. 25,00,000.",
+    "entities": [
+      {"start": 65, "end": 79, "label": "POLICY_LIMIT"}
+    ]
+  }
+]
