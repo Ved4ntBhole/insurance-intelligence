@@ -1,7 +1,6 @@
+models/
+data/*.pdf
+data/parsed_docs.json
 __pycache__/
 *.pyc
 .env
-.ipynb_checkpoints/
-
-models/bert-insurance-ner/checkpoint-*/
-models/bert-insurance-ner/runs/
