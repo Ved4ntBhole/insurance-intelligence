@@ -24,87 +24,76 @@ Insurance underwriters manually process hundreds of policy documents to check co
 
 ## End-to-End Pipeline
 
-From raw PDF bytes to a structured dashboard report in six stages:
+> How the system processes a policy document from upload to final report — every box is a distinct stage with a clear role.
 
 ```mermaid
 flowchart TB
-    PDF[PDF Upload]
-    PLB[pdfplumber\nRaw text extraction]
+    A([🗂️ User uploads a PDF\nInsurance policy document])
 
-    subgraph NER [Entity branch]
-        BERT[BERT NER\nbert-base-uncased fine-tuned]
-        ENT[Entity table\nINSURED · COVERAGE · PREMIUM\nPOLICY_DATE · EXCLUSION · POLICY_LIMIT]
+    A -->|"Raw PDF file"| B
+
+    B["📄 pdfplumber\n─────────────────\nReads each page of the PDF\nand pulls out all the plain text.\nNo ML yet — just reading."]
+
+    B -->|"Clean plain text"| C
+
+    C{"🔀 Text sent to\ntwo models in parallel"}
+
+    C -->|"Text for entity detection"| D
+    C -->|"Text for clause checking"| G
+
+    subgraph NER ["🔵  Branch 1 — What's in this document?"]
+        D["🤖 BERT NER Model\n─────────────────\nReads every word and labels it.\nFine-tuned on insurance language.\nRuns on the full document text."]
+        D -->|"Each word labelled\nwith an entity type"| E
+        E["🏷️ Entity Extraction\n─────────────────\nGroups labelled words into\nnamed entities:\nWho is insured? What is covered?\nHow much? What is excluded?"]
     end
 
-    subgraph SIM [Similarity branch]
-        SBERT[Sentence-BERT\nall-MiniLM-L6-v2]
-        CLAUSE[Clause report\n12 standard templates scored]
+    subgraph SIM ["🟢  Branch 2 — Are the standard clauses present?"]
+        G["🧠 Sentence-BERT Model\n─────────────────\nConverts each clause in the\ndocument into a 384-number\nsemantic vector (an embedding)."]
+        G -->|"Clause vectors\n(one per sentence)"| H
+        H["📐 Cosine Similarity Check\n─────────────────\nCompares each clause vector\nagainst 12 standard insurance\nclause templates using maths.\nProduces a score from 0 to 1."]
+        H -->|"Score per clause"| I
+        I{{"Threshold = 0.45\n─────────\n≥ 0.45 → Present ✅\n0.30–0.45 → Review ⚠️\n< 0.30 → Absent ❌"}}
     end
 
-    DASH[Streamlit dashboard\nInteractive review interface]
+    E -->|"Structured entity table"| J
+    I -->|"Clause coverage report"| J
 
-    PDF --> PLB
-    PLB --> BERT
-    PLB --> SBERT
-    BERT --> ENT
-    SBERT --> CLAUSE
-    ENT --> DASH
-    CLAUSE --> DASH
+    J[/"📊 Streamlit Dashboard\n─────────────────\nShows the underwriter:\n• Highlighted entity spans in text\n• Entity table with all values found\n• Clause-by-clause coverage scores\n• Anomaly flags for human review"/]
 ```
 
 ---
 
-## Dual-Model Architecture
+## Clause Similarity — How the Score Is Decided
 
-The same extracted text feeds two parallel ML branches that produce complementary outputs:
-
-```mermaid
-flowchart LR
-    TEXT[Extracted text\npdfplumber output]
-
-    subgraph B1 [Entity branch]
-        NER[BERT NER\nbert-base-uncased\nfine-tuned on 60 samples]
-        SPANS[Entity spans\nINSURED · COVERAGE · EXCLUSION…]
-    end
-
-    subgraph B2 [Similarity branch]
-        SBERT[Sentence-BERT\nall-MiniLM-L6-v2\n384-dim embeddings]
-        SCORES[Clause scores\n12 templates · cosine similarity]
-    end
-
-    DASH[Streamlit dashboard]
-
-    TEXT --> NER
-    TEXT --> SBERT
-    NER --> SPANS
-    SBERT --> SCORES
-    SPANS --> DASH
-    SCORES --> DASH
-```
-
----
-
-## Clause Similarity Decision Flow
-
-Each clause in the document is compared against 12 standard templates. The cosine similarity score determines the outcome:
+> This diagram shows exactly what happens inside Branch 2 for a single clause comparison.
 
 ```mermaid
 flowchart TB
-    DOC[Document clause\nfrom policy PDF]
-    TPL[Standard template\none of 12 templates]
-    ENC[Sentence-BERT encoder\n384-dim vector per clause\ncosine similarity computed]
-    SCORE{Score\n0.0 to 1.0}
+    A([📄 One sentence from\nthe uploaded document\ne.g. 'covers fire damage to premises'])
 
-    PRESENT[✅ Present\nscore ≥ 0.45\nno action needed]
-    REVIEW[⚠️ Review\n0.30 – 0.45\nmanual check recommended]
-    ABSENT[❌ Absent\nscore < 0.30\nflag for underwriter]
+    B([📋 One standard clause template\nfrom our library of 12\ne.g. 'fire and lightning coverage clause'])
 
-    DOC --> ENC
-    TPL --> ENC
-    ENC --> SCORE
-    SCORE -->|high| PRESENT
-    SCORE -->|mid| REVIEW
-    SCORE -->|low| ABSENT
+    A -->|"Input text"| C
+    B -->|"Template text"| C
+
+    C["🧠 Sentence-BERT Encoder\n─────────────────\nConverts both texts into\n384-dimensional numeric vectors.\nSemantically similar sentences\nproduce similar vectors."]
+
+    C -->|"Vector A\n[0.12, -0.34, 0.88, ...]"| D
+    C -->|"Vector B\n[0.11, -0.31, 0.85, ...]"| D
+
+    D["📐 Cosine Similarity Formula\n─────────────────\nMeasures the angle between\nthe two vectors.\nSmall angle = similar meaning.\nScore ranges from 0.0 to 1.0."]
+
+    D -->|"Score = 0.87"| E
+
+    E{{"Is the score\nabove threshold 0.45?"}}
+
+    E -->|"Yes — score ≥ 0.45"| F
+    E -->|"Borderline — 0.30 to 0.45"| G
+    E -->|"No — score < 0.30"| H
+
+    F(["✅ PRESENT\nClause is covered.\nNo action needed."])
+    G(["⚠️ REVIEW\nPossible paraphrase.\nUnderwriter checks manually."])
+    H(["❌ ABSENT\nClause is missing.\nFlagged in the report."])
 ```
 
 ---
